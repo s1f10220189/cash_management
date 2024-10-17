@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}ユーザー登録{% endblock %}
+
+{% block content %}
+<h2>名前を入力してください:</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="名前を入力" required>
+    <button type="submit">登録</button>
+</form>
+{% endblock %}
+
+
